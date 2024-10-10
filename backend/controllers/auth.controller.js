@@ -34,6 +34,10 @@ export const signup = async (req, res) => {
 			username,
 		});
 
+
+		//q3tuI436x24FiXb8
+
+		//mongodb+srv://jainmitesh2393:q3tuI436x24FiXb8@cluster0.9ldhl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 		await user.save();
 
 		const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: "3d" });
